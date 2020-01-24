@@ -1,0 +1,33 @@
+<h2>Our Story</h2>
+<p>We're two siblings who wanted to honor a very important person: Uncle Mario. What made Mario so important to us? Well, when we were kids, he was the adult who always talked to us like we were real people, and he was always up for adventure.</p>
+<p>Most of all, Uncle Mario is our coffee hero. Unlike our instant-coffee-loving parents, Uncle Mario knew the value of a good brew. He lived a too-short life, but to keep his memory living on, we're committed to purveying the finest coffees from around the world (and as far as our parents go, we still love them dearly).</p>
+
+<h3>What's New?</h3>
+<p>We like to keep our coffee menu fresh.</p>
+<ul>
+  <li><%= link_to "Add New Product", new_product_path %></li>
+  <li><%= link_to "Newest Coffee Offerings", recents_path("three_most_recent") %></li>
+</ul>
+
+<h3>What's the Word?</h3>
+<p>See what your fellow coffee aficionados are saying about our beans. And join the conversation!</p>
+<ul>
+  <li><%= link_to "Coffees with the Most Reviews", most_rev_path("most_reviews") %></li>
+</ul>
+
+<h3>Why Rwanda?</h3>
+<p>Mario traveled widely, and his favorite place in the world was the mountains of Rwanda. We can't sell coffee that grown near our homes, but whenever we can, we like to feature Rwandan beans. That country is close to our hearts, just like it was for Uncle Mario. </p>
+<ul>
+  <li><%= link_to "Check Out Our Rwandan Coffees", local_path("localness") %></li>
+</ul>
+
+<% if @products.any? %>
+<h2>Current Offerings</h2>
+  <ul>
+    <% @products.each do |product| %>
+      <li><%= link_to product.name, product_path(product) %></li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>There are no products yet.</p>
+<% end %>

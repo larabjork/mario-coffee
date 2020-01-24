@@ -1,0 +1,13 @@
+<h2>Most Recent Additions to Our Coffee Selection</h2>
+
+<% if @products.any? %>
+  <ul>
+    <% @products.each do |product| %>
+      <li><%= link_to product.name, product_path(product) %></li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>We don't have any recently added coffees.</p>
+<% end %>
+
+<p><%= link_to "Go Back to Full Coffee List", products_path %></p>

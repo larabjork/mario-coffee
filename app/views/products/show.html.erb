@@ -1,0 +1,39 @@
+<div class="container">
+
+<div class="coffee-feature">
+  <h1>Blend: <%= @product.name %></h1>
+  <h3>Price Per Pound: $<%= @product.cost %></h3>
+  <h3>Origin: <%= @product.country_of_origin %></h3>
+</div>
+
+<% if @product.reviews.any? %>
+  <h2>Coffee Talk</h2>
+  <table>
+    <tr>
+      <th class="author">Who Said It</th>
+      <th class="content-body">Words of Wisdom</th>
+      <th class="rating">Rating</th>
+    </tr>
+  <% @product.reviews.each do |review| %>
+    <tr>
+      <td><%= review.author %></td>
+      <td><%= review.content_body %></td>
+      <td><%= review.rating %></td>
+    </tr>
+  <% end %>
+</table>
+<% else %>
+  <p> There are no reviews for this coffee yet.</p>
+<% end %>
+
+<p><%= link_to "Tell us what you think of this coffee!", new_product_review_path(@product) %></p>
+
+<p><%= link_to "Edit this coffee's info", edit_product_path(@product) %></p>
+<p><%= link_to "Delete this coffee", product_path(@product),
+                        :data => {:confirm => "Are you sure?",
+                                       :method => "delete"} %></p>
+
+<p><%= link_to "Return to coffee list", products_path %></p>
+
+
+</div>
