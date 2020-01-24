@@ -1,0 +1,72 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ // "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
+ */
+ @import "bootstrap-sprockets";
+ @import "bootstrap";
+
+.jumbotron {
+  background-color: #073B4C;
+  color: white;
+}
+
+ h1, h2, h3, h4 {
+ font-family: 'Luckiest Guy', cursive;
+ color: #073B4C;
+}
+
+p, li {
+  font-family: 'Roboto', sans-serif;
+  color: #073B4C;
+}
+a {
+  font-family: 'Roboto', sans-serif;
+  color: #073B4C;
+}
+
+body {
+  background-color: #E2DADB;
+}
+
+table {
+  width: 100%;
+}
+
+th, td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #073B4C;
+}
+
+th {
+  font-family: 'Luckiest Guy', cursive;
+  font-size: 20px;
+}
+
+th.author {
+  width: 15%
+}
+th.rating {
+  width: 8%
+}
+
+.coffee-feature {
+  background: #d1f1fa;
+  padding: 15px;
+  width: 50%;
+  border-radius: 6px;
+}
+
+p {
+  font-style: italic;
+}
