@@ -1,8 +1,8 @@
-# Mario's Specialty Food Products
-## Created by Lara Bjork on January 17, 2020
+# Mario's Coffee Emporium
+## Created by Lara Bjork on January 17, 2020, with more functionality added on January 24, 2020
 ### Project Description
 
-This project was completed as an independent assignment for the Ruby class at Epicodus, after a week focused on Rails with Active Record. The task description was as follows:
+This project was completed as an independent assignment for the Ruby class at Epicodus. It was completed in two parts, with the first after a week focused on Rails with Active Record, with the second coming after a week on Authentication and Authorization. For the first week, the task description was as follows:
 
 _You're in the running for a freelance development job as the developer for Mario's Speciality Food Products (or another fictional company of your choosing). First, Mario wants to make sure you're the right person for the job. He's asked you for an MVP and wants it by 5:00 tonight. The stakes are higher than usual, since Mario's old site had thousands of unique visitors each day. If you can get the job, this is a great way to increase your profile as a developer._
 
@@ -10,8 +10,13 @@ _In particular, Mario is concerned about the information in his database being c
 
 I made this into a speciality coffee store, rather than food in general.
 
+For the second week of a two-week project, the task was further described:
+_Mario was so impressed by your MVP that he wants you to continue developing his new site. However, he's concerned about the fact that anyone viewing his site has full access to CRUD functionality. He has given you a list of user stories and has asked you to update his site to take them into account. Today's focus is on adding authentication to ease Mario's worries._
+
+_You will be adding authentication to expand your project from last week. Feel free to use the same exact project or rebuild it from scratch if you feel inclined. You may use either BCrypt or Devise to add authentication, whichever you prefer. Your project should have full functionality by the time you submit it today, including all of last week's objectives._
+
 ### Specifications
-The assignment description provided the following specifications:
+The assignment description for the first week provided the following specifications:
 
 _* Database: The site should have functionality to review products so your database should include a one-to-many relationship between Products and Reviews. All products must have a name, cost and country_of_origin. All reviews should have an author, content_body and rating. (A rating can be a number between 1 and 5.) You can include other fields of your choosing as well._
 
@@ -41,6 +46,14 @@ _* Seeding: Your project should include seed data for 50 products and 250 review
 _* Flash Messages: The project should include flash success and error messages for creating products and reviews._
 
 _* Overall Styling: You'll be demoing this site to the CEO of Mario's Specialty Foods, so it should look presentable._
+
+Here are the user stories provided for week 2 of the project:
+
+_* As an admin, I should be able to log in and log out of the application._
+_* As an admin, I should be able to add, update and delete products._
+_* As an admin, I should be able to add reviews._
+_* As an admin, I want to ensure that other users don't have access to CRUD functionality._
+_* As a user, I want to be able to create an account and add a review to a product. (A product can have many comments.) This is the only CRUD functionality a user can have._
 
 ### Technologies Used
 Ruby 2.6.5, Rails 5.2.4, Bundler, PSQL/Postgres
