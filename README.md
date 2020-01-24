@@ -56,7 +56,7 @@ Project was written using Google Chrome. No other browsers were tested.
 6. Run **rake db:migrate**, followed by **rake db:test:prepare**.
 7. To seed the databases with placeholder information, run **rake db:seed**, which should give you 50 products and 250 reviews.
 8. Enter **rails s** or **rails server** at the terminal prompt.
-Open a browser window and type **localhost:3000** in the address bar.
+9. Open a browser window and type **localhost:3000** in the address bar.
 
 If something doesn't display correctly or goes wrong somehow, please contact me at <lara.m.bjork@gmail.com> and I will do my best to troubleshoot for you.
 
