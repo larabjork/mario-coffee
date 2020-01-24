@@ -1,9 +1,24 @@
 class ProductsController < ApplicationController
 
+
   def index
     @products = Product.all
     render :index
   end
+  # def index
+  #   if params[:most_rev]
+  #     @products = Product.most_reviews
+  #   elsif params[:local]
+  #     @products = Product.localness
+  #   elsif params[:most_recent]
+  #     @products = Product.three_most_recent
+  #   else
+  #     @products = Product.all
+  #   end
+  #   render :index
+  # end
+  # above is an attempt to implement Travis version
+
 
   def localness
     params[:format]
@@ -16,22 +31,15 @@ class ProductsController < ApplicationController
      @products = Product.three_most_recent
      render :recents
    end
+
    def most_reviews
      params[:format]
      @products = Product.most_reviews
      render :most_rev
    end
 
+  #
 
-
-  # if params[:format]
-  #   @products = Product.localness
-  #   render :local
-  #   # elsif params[:format => "localness"]
-  #   #   @products = Product.three_most_recent
-  #   #   render :recents
-  #   #   @products = Product.most_reviews
-  #   els
 
     def new
       @product = Product.new

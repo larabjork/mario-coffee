@@ -4,6 +4,6 @@
     <h3>Price Per Pound: $<%= @product.cost %></h3>
     <h3>Origin: <%= @product.country_of_origin %></h3>
   </div>
-  <h1>Tell us what you think:</h1>
+  <h1>Tell us what you think, <%= current_user.username %>:</h1>
   <%= render "layouts/review_form" %>
 </div>
