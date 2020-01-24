@@ -23,16 +23,6 @@ class ProductsController < ApplicationController
    end
 
 
-
-  # if params[:format]
-  #   @products = Product.localness
-  #   render :local
-  #   # elsif params[:format => "localness"]
-  #   #   @products = Product.three_most_recent
-  #   #   render :recents
-  #   #   @products = Product.most_reviews
-  #   els
-
     def new
       @product = Product.new
       render :new
