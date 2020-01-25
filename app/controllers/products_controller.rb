@@ -7,11 +7,11 @@ class ProductsController < ApplicationController
   # end
   def index
   s = params[:sorter]
-    if s == "mostrev"
+    if s == "MostRev"
       @products = Product.most_reviews
-    elsif s== "local"
+    elsif s== "Rwandan"
       @products = Product.localness
-    elsif s=="new"
+    elsif s=="New"
       @products = Product.three_most_recent
     else
       @products = Product.all
