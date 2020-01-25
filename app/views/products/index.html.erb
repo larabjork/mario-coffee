@@ -6,24 +6,22 @@
 
 <h3>What's New?</h3>
 <p>We like to keep our coffee menu fresh.</p>
-<%= button_to "Newest Coffees", action: "index" %>
- <form method="post" action="/controller/new" class="button_to">
- <input value="new" type="submit" name="sort-method"/>
-</form>
+  <form method="get" action="/products" class="button_to">
+    <input value="New" type="submit" name="sorter"/>
+  </form>
 
 <h3>What's the Word?</h3>
 <p>See what your fellow coffee aficionados are saying about our beans. And join the conversation!</p>
-<%= button_to "Most Reviewed Coffees", action: "index" %>
-<!-- <form method="post" action="/controller/new" class="button_to">
-<input value="mostrev" type="submit" name="sort-method"/>
-</form>" -->
+<form method="post" action="/controller/new" class="button_to">
+<input value="mostrev" type="submit" name="sorter"/>
+</form>"
 
 
 <h3>Why Rwanda?</h3>
 <p>Mario traveled widely, and his favorite place in the world was the mountains of Rwanda. We can't sell coffee that grown near our homes, but whenever we can, we like to feature Rwandan beans. That country is close to our hearts, just like it was for Uncle Mario. </p>
 <%= button_to "Rwandan Coffees", action: "index" %>
 <!-- <form method="post" action="/controller/new" class="button_to">
-<input value="local" type="submit" name="sort-method"/>
+<input value="local" type="submit" name="sorter"/>
 </form>" -->
 
 

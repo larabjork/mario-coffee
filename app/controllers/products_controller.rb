@@ -1,42 +1,43 @@
 class ProductsController < ApplicationController
 
 
-  def index
-    @products = Product.all
-    render :index
-  end
   # def index
-  #   if params[:most_rev]
-  #     @products = Product.most_reviews
-  #   elsif params[:local]
-  #     @products = Product.localness
-  #   elsif params[:most_recent]
-  #     @products = Product.three_most_recent
-  #   else
-  #     @products = Product.all
-  #   end
+  #   @products = Product.all
   #   render :index
   # end
+  def index
+  s = params[:sorter]
+    if s == "mostrev"
+      @products = Product.most_reviews
+    elsif s== "local"
+      @products = Product.localness
+    elsif s=="new"
+      @products = Product.three_most_recent
+    else
+      @products = Product.all
+    end
+    render :index
+  end
   # above is an attempt to implement Travis version
 
 
-  def localness
-    params[:format]
-    @products = Product.localness
-    render :local
-  end
-
-   def three_most_recent
-     params[:format]
-     @products = Product.three_most_recent
-     render :recents
-   end
-
-   def most_reviews
-     params[:format]
-     @products = Product.most_reviews
-     render :most_rev
-   end
+  # def localness
+  #   params[:format]
+  #   @products = Product.localness
+  #   render :local
+  # end
+  #
+  #  def three_most_recent
+  #    params[:format]
+  #    @products = Product.three_most_recent
+  #    render :recents
+  #  end
+  #
+  #  def most_reviews
+  #    params[:format]
+  #    @products = Product.most_reviews
+  #    render :most_rev
+  #  end
 
   #
 

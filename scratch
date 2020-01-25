@@ -11,9 +11,9 @@ THESE were the links to my week 1 version that would go to separate pages - tryi
   <li><%= link_to "Check Out Our Rwandan Coffees", local_path("localness") %></li>
 </ul>
 
+<%= button_to "Newest Coffees", method: "get", action: "index", most_recent: "most_recent" %>
 
-
-
+<%= button_to "Newest Coffees", action: "index" %>
 
 
 
