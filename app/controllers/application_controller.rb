@@ -9,12 +9,22 @@ class ApplicationController < ActionController::Base
   end
 
   def admin_auth
-    if !current_user.admin
+    if not_admin?
       flash[:alert] = "You aren't authorized to visit that page. You need to log in as an admin."
       redirect_to '/'
     end
   end
-  #
+
+  def not_admin?
+    if !current_user
+      true
+    elsif !current_user.admin
+      true
+    else
+      false
+    end
+  end
+
   def authorize
     if !current_user
       flash[:alert] = "You aren't authorized to visit that page. Try logging in."
