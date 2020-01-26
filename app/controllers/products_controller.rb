@@ -1,4 +1,5 @@
 class ProductsController < ApplicationController
+before_action :admin_auth, only: [:new, :create, :edit, :update, :destroy]
 
   def index
     s = params[:sorter]
