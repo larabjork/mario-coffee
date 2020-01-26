@@ -13,4 +13,10 @@ describe "the sign up process" do
     expect(page).to have_content "You've successfully signed up!"
     expect(page).to have_content 'ingrid@coffeelove.com'
   end
+
+  it "gives an error when no information is entered" do
+    visit signup_path
+    click_on 'Sign Up'
+      expect(page).to have_content "There was a problem signing up."
+  end
 end
