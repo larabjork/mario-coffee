@@ -5,9 +5,9 @@ before_action :admin_auth, only: [:new, :create, :edit, :update, :destroy]
     s = params[:sorter]
     if s == "Buzzy"
       @products = Product.most_reviews
-    elsif s== "Rwandan"
+    elsif s == "Rwandan"
       @products = Product.localness
-    elsif s=="New"
+    elsif s == "New"
       @products = Product.three_most_recent
     else
       @products = Product.all

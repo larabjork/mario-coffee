@@ -3,8 +3,7 @@
 
 CUT FROM REVIEW FORM -
 
-<%= f.label "You can call me:" %>
-<%= f.text_field :author %>
+
 
 
 <% if logged_in? %>
@@ -16,3 +15,6 @@ CUT FROM REVIEW FORM -
 def logged_in?
   !current_user.nil?
 end
+
+
+  <h1>Tell us what you think, <%= current_user.username %>:</h1>
