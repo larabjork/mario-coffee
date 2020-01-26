@@ -1,6 +1,9 @@
 class User < ApplicationRecord
   # has_secure_password
   attr_accessor :password
+  validates :username, :presence => true
+  validates :password, :presence => true
+  validates :password_confirmation, :presence => true
   validates_confirmation_of :password
   validates :email, :presence => true, :uniqueness => true
   before_save :encrypt_password

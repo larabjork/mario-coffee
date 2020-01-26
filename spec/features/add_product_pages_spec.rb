@@ -1,5 +1,21 @@
 require 'rails_helper'
 
+describe "the sign up process" do
+  it "adds a new user" do
+    visit products_path
+    click_link 'Sign up'
+    fill_in 'Username', :with => 'Ingrid'
+    fill_in 'Email', :with => 'ingrid@coffeelove.com'
+    fill_in 'Password', :with => '1234567'
+    fill_in 'Password confirmation', :with => '1234567'
+    check('Admin?')
+    click_on 'Sign Up'
+    expect(page).to have_content "You've successfully signed up!"
+    expect(page).to have_content 'ingrid@coffeelove.com'
+  end
+end
+
+
 describe "the add a product process" do
   it "adds a new product" do
     visit products_path
