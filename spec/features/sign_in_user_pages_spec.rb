@@ -26,7 +26,7 @@ end
 describe "the sign in process" do
   it "returns sign-in error message when login unsuccessful" do
     visit signin_path
-    fill_in 'Email', :with => 'ingrid@coffeelove.com'
+    fill_in 'Email', :with => 'smitty@coffeelove.com'
     fill_in 'Password', :with => '1234567'
     click_on 'Sign in'
     expect(page).to have_content "There was a problem signing in. Please try again."
