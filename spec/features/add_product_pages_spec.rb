@@ -1,7 +1,5 @@
 require 'rails_helper'
 
-
-
 context "with a signed-in admin user" do
   let (:email) {'ingrid@coffeelove.com'}
   before do
